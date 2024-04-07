@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: my-recipes-server
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/recipes
+    username: chef
+    password: secretsauce
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        search:
+          backend:
+            type: lucene
+            directory.root: ./data/index
+  session:
+    jdbc:
+      initialize-schema: always

@@ -7,3 +7,4 @@ services:
       - 'POSTGRES_USER=chef'
     ports:
       - '5432'
+    network_mode: host
