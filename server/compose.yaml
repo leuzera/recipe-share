@@ -8,3 +8,8 @@ services:
     ports:
       - '5432'
     network_mode: host
+  appwrite:
+    image: 'appwrite/appwrite:1.5'
+    ports:
+      - '8080:80'
+    network_mode: host
